@@ -1,0 +1,26 @@
+.mains {
+  // padding-left: 200px;
+  display: flex;
+  .ss {
+    display: grid;
+    width: 200px;
+    font-size: 80%;
+    .hh {
+       font-size: 20px;
+       margin-top: 20px; 
+        
+    }
+    .subb{
+     
+        font-size: 10px;
+        margin-top: -20px; 
+        width: 50px ;
+    }
+   
+    cursor: pointer;
+  }
+  .image {
+    width: 100px;
+    height: 100px;
+  }
+}

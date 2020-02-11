@@ -1,0 +1,35 @@
+.main {
+  display: grid;
+
+  .hello {
+    padding-left: 50%;
+  }
+  .input {
+    border: none;
+    display: grid;
+    padding: 16px 32px;
+
+    input {
+      margin: 12px 0px;
+      border: none;
+      border-bottom: 1px solid rgb(25, 25, 150);
+    }
+      .btn {
+    color: white;
+    background-color: goldenrod;
+    border-radius: 25px;
+    text-align: center;
+    width: 120px;
+    height: 35px;
+    font-size: 12px;
+    font-family: "Montserrat", sans-serif;
+    border: none;
+    transition: background 0.2s linear;
+    &:hover {
+      background-color: black;
+      color: white;
+      cursor: pointer;
+    }
+  }
+  }
+}
