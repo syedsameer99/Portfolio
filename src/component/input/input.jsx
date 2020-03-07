@@ -1,50 +1,110 @@
 import React, { Component } from "react";
 import "./input.scss";
+import axios from 'axios'
 
 export class Input extends Component {
   state = {
-    first: "",
     name: "",
     email: "",
-    subject: "",
-    type: ""
+    message: ""
   };
 
+  handleSubmit(e){
+    e.preventDefault();
+    axios({
+      method: "POST", 
+      url:"http://localhost:3000/send", 
+      data:  this.state
+    }).then((response)=>{
+      if (response.data.status === 'success'){
+        alert("Message Sent."); 
+        this.resetForm()
+      }else if(response.data.status === 'fail'){
+        alert("Message failed to send.")
+      }
+    })
+  }
+
+  resetForm(){
+    
+     this.setState({name: '', email: '', message: ''})
+  }
+
   render() {
-    const onInputchange = event => {
-      const { name, value } = event.target;
-      this.setState({ [name]: value });
-    };
+    // const onInputchange = event => {
+    //   const { name, value } = event.target;
+    //   this.setState({ [name]: value });
+    // };
+
+    // onNameChange = event => {
+    //   this.setState({ name: event.target.value });
+    // };
+
+    // onEmailChange = event => {
+    //   this.setState({ email: event.target.value });
+    // };
+
+    // onMessageChange = event => {
+    //   this.setState({ message: event.target.value });
+    // };
+    // handleSubmit = event => {
+    //   event.preventDefault();
+    //   console.log(this.state);
+    // };
+
     return (
       <div className="main">
         <div className="hello">
-          <h1>Say Hello</h1>
+          <h1>Contact Us</h1>
         </div>
-        <div className="input">
+
+        <form
+          className="formm"
+          onSubmit={this.handleSubmit.bind(this)}
+          method="POST"
+        >
           <input
-            onChange={onInputchange}
-            name="first"
-            placeholder="first name"
-          />
-          <input onChange={onInputchange} name="name" placeholder="name" />
-          <input onChange={onInputchange} name="email" placeholder="email" />
-          <input
-            onChange={onInputchange}
-            name="subject"
-            placeholder="subject of message"
+            name="name"
+            placeholder="Your name"
+            onChange={this.onNameChange.bind(this)}
+            value={this.state.name}
           />
           <input
-            onChange={onInputchange}
-            name="type"
-            placeholder="type of message"
+            //onChange={onInputchange}
+            name="email"
+            placeholder="Your email address"
+            onChange={this.onEmailChange.bind(this)}
+            value={this.state.email}
           />
-          <button onClick={() => alert(this.state.first)} className="btn">
+          <input
+            //onChange={onInputchange}
+            name="message"
+            placeholder="Your Message"
+            onChange={this.onMessageChange.bind(this)}
+            value={this.state.message}
+          />
+
+          <button className="btn" type="submit" onSubmit={this.handleSubmit}>
             Submit
           </button>
-        </div>
+        </form>
       </div>
     );
   }
+  onNameChange(event) {
+    this.setState({name: event.target.value})
+    }
+  
+    onEmailChange(event) {
+    this.setState({email: event.target.value})
+    }
+  
+    onMessageChange(event) {
+    this.setState({message: event.target.value})
+    }
+  
+ 
+  
 }
 
 export default Input;

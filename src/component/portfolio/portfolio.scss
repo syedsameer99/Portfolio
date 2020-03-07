@@ -1,0 +1,52 @@
+.portfoliomain {
+  .subport {
+    .p {
+      display: flex;
+      justify-content: center;
+    }
+    .potbtn {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        
+      .web {
+        color: white;
+        background-color: goldenrod;
+        border-radius: 25px;
+        text-align: center;
+        width: 120px;
+        height: 35px;
+        font-size: 12px;
+        font-family: "Montserrat", sans-serif;
+        border: none;
+        margin-top: 10px;
+        margin: 10px;
+        transition: background 0.2s linear;
+        &:hover {
+          background-color: black;
+          color: white;
+          cursor: pointer;
+        }
+      }
+      .desktop {
+        color: white;
+        background-color: goldenrod;
+        border-radius: 25px;
+        text-align: center;
+        width: 120px;
+        height: 35px;
+        font-size: 12px;
+        font-family: "Montserrat", sans-serif;
+        border: none;
+        margin-top: 10px;
+        margin: 10px;
+        transition: background 0.2s linear;
+        &:hover {
+          background-color: black;
+          color: white;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

@@ -1,5 +1,6 @@
 .team {
-    
+    display: grid;
+
   .our {
     text-align: center;
   }
@@ -8,6 +9,7 @@
   }
   .m{
       display: flex;
+      flex-wrap: wrap;
       margin-left: 15%;
       border-color: transparent;
       

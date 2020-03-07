@@ -1,18 +1,17 @@
-.h{
-    text-align: center;
-    // padding-left: 600px;
-}
-.service-main{
-    width: 100%;
-    
-    // display: flex;
-}
-.content{
-    width: 50%;
-    overflow: hidden;
+.dmain {
+  display: flex;
+  flex-wrap: wrap;
+  
+  .headingss {
+    display: flex;
+    justify-content: center;
+   
+  }
+  .smainn {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    // align-content: center;
-    padding-left: 25vw;
+    text-align: center;
+    margin-left: 5%;
+    overflow: hidden;
+  }
 }

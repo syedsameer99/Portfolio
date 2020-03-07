@@ -1,35 +1,43 @@
 .main {
-  display: grid;
+   display: grid;
+  margin: 30px;
+  // display: flex;
+  // flex-wrap: wrap;
 
   .hello {
     padding-left: 50%;
   }
-  .input {
+  .formm {
+    margin-left: 50%;
+    // display: flex;
+    justify-content: center;
     border: none;
     display: grid;
     padding: 16px 32px;
+    width: 50px;
 
     input {
+      width: 700px;
       margin: 12px 0px;
       border: none;
       border-bottom: 1px solid rgb(25, 25, 150);
     }
-      .btn {
-    color: white;
-    background-color: goldenrod;
-    border-radius: 25px;
-    text-align: center;
-    width: 120px;
-    height: 35px;
-    font-size: 12px;
-    font-family: "Montserrat", sans-serif;
-    border: none;
-    transition: background 0.2s linear;
-    &:hover {
-      background-color: black;
+    .btn {
       color: white;
-      cursor: pointer;
+      background-color: goldenrod;
+      border-radius: 25px;
+      text-align: center;
+      width: 120px;
+      height: 35px;
+      font-size: 12px;
+      font-family: "Montserrat", sans-serif;
+      border: none;
+      transition: background 0.2s linear;
+      &:hover {
+        background-color: black;
+        color: white;
+        cursor: pointer;
+      }
     }
-  }
   }
 }
